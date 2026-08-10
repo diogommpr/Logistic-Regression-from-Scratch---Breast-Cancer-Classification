@@ -2,7 +2,9 @@
 
 ## 1. Overview
 This project implements binary logistic regression from scratch using NumPy to classify breast tumors as benign or malignant using the Breast Cancer Wisconsin dataset.
+
 The objective was to develop a practical understanding of the mathematical foundations of logistic regression by implementing the core algorithm directly, instead of relying on a pre-built machine learning estimator such as scikit-learn's LogisticRegression.
+
 The project covers the main components of logistic regression, including the sigmoid function, gradient computation, gradient descent, classification, and model evaluation. 
 This project was developed based on concepts learned in Andrew Ng's _Supervised Machine Learning: Regression and Classification Course_. 
 
