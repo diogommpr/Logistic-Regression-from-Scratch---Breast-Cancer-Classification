@@ -9,35 +9,22 @@ The project covers the main components of logistic regression, including the sig
 This project was developed based on concepts learned in Andrew Ng's _Supervised Machine Learning: Regression and Classification Course_. 
 
 ## 2. Dataset
-The Breast Cancer Wisconsin dataset was used. The dataset contains 569 observations describing characteristics of cell nuclei extracted from digitized images of breast mass fine-needle aspirates.
-
-The target variable is:
-
-- `diagnosis`
-  - `0` = Benign
-  - `1` = Malignant
-
-Although the dataset contains multiple numerical features, only two were selected for this implementation:
-
-- `radius_mean`
-- `texture_mean`
-
-Using two features was intended to allow the observations and the learned decision boundary to be visualized in two dimensions while keeping the focus on understanding the logistic regression algorithm.
+The Breast Cancer Wisconsin dataset was used, containing 569 observations and multiple features extracted from images of breast masses.
 
 ## 3. Machine Learning Workflow
 
 ### 3.1 Target Encoding
 
-The original diagnostic labels were converted to binary values:
+The diagnosis target variable was numerically encoded:
 
 - Benign (`B`) → 0
 - Malignant (`M`) → 1
-
 
 ### 3.2 Feature Selection
 
 Mean radius and mean texture were selected as the two predictor variables.
 
+Using two features allowed the observations and the learned decision boundary to be visualized in two dimensions.
 
 ### 3.3 Train-Test Split
 
@@ -89,6 +76,12 @@ Predicted probabilities were converted into binary classifications using a thres
 - Probability ≥ 0.5 → Malignant
 - Probability < 0.5 → Benign
 
+### 4.6 Decision Boundary
+
+The learned decision boundary was plotted to visualize how the model separates benign and malignant observations based on the two selected features.
+
+The decision boundary corresponds to the combinations of feature values for which the predicted probability is 0.5.
+
 ## 5. Model Evaluation
 
 The final model achieved:
@@ -98,7 +91,7 @@ The final model achieved:
 | Training set | 89.45% |
 | Test set | 86.84% |
 
-The relatively small difference between training and test accuracy suggests that the model generalizes reasonably well to unseen observations within this dataset.
+Using only two features, the model achieved 89.45% training accuracy and 86.84% test accuracy. The relatively small difference between training and test accuracy suggests that the model generalizes reasonably well to unseen observations within this dataset.
 
 ## 6. Visualization
 
